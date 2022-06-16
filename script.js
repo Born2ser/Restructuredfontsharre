@@ -20,14 +20,70 @@ async function get_fontname(){
         // tets.appendChild(text)
         // container.appendChild(tets)
         // creating new elements
+        let fontName = document.createElement('p');
+        let select1 = document.createElement('select');
+        let weight_container = document.createElement('div');
+        let weight = document.createElement('a');
+        let input_weight_range1 = document.createElement('input');
+        let size_container = document.createElement('div');
+        let size = document.createElement('a');
+        let  input_size_range2 = document.createElement('input');
+        let no_of_styles = document.createTextNode(i.variants.length + ' ' + 'Styles');
+                // Part Two
+        let number_of_styles = document.createElement('p');  
+        let variabu = document.createElement('a'); 
+        let closed_source = document.createElement('a');
+        // 4 Pillar Div
         let motherdiv = document.createElement('div');
         let controller = document.createElement('div');
         let text = document.createElement('input');
+        text.classList.add('text');
         let footer = document.createElement('div');
-      
-        // others created stuff
-        let fontName = document.createElement('p');
-        let select1 = document.createElement('select');
+        footer.classList.add('footer');
+        let sec1 = document.createElement('div');
+        let sec2 = document.createElement('div'); 
+        let mother_control = document.createElement('div');
+        console.log(mother_control)
+        // Style Select1
+        select1.classList.add('classification');
+        // Weight_Container Styles
+        weight_container.classList.add('weight');
+        weight.classList.add('weight_input');
+        size_container.classList.add('size');
+        size.classList.add('size_input');
+
+
+
+          // Appending to Controller
+          controller.appendChild(fontName);
+          controller.appendChild(select1);
+          // controller.appendChild(option1);
+          controller.appendChild(weight_container);
+          controller.appendChild(input_weight_range1); 
+          controller.appendChild(size);
+          controller.appendChild(input_size_range2);
+          controller.appendChild(number_of_styles);
+          controller.appendChild(number_of_styles);
+          controller.appendChild(variabu);
+          controller.appendChild(closed_source); 
+        //   mother_control.appendChild(controller);
+        //   mother_control.appendChild(motherdiv);
+          // Classlist for mother_controller
+            mother_control.classList.add('mother_control');
+         // Controller children Di
+                // others created stuff
+                controller.appendChild(sec1);
+                controller.appendChild(sec2); 
+        // Append to Sec1 Div
+        sec1.appendChild(fontName);
+        fontName.classList.add('font_name');
+        sec1.appendChild(select1);
+        sec1.appendChild(weight_container);
+        sec1.appendChild(size_container);
+
+        // Append to Sec2 Div
+
+        
         i.variants.forEach(option=>{
             let option1 = document.createElement('option'); 
             let optionvalue = document.createTextNode(option);
@@ -35,45 +91,34 @@ async function get_fontname(){
             option1.appendChild(optionvalue);
             select1.appendChild(option1);
         });
-        let weight_container = document.createElement('div');
-        let weight = document.createElement('a');
-        weight_container.appendChild(weight)
-        // weight.appendChild(weight_container);
-        let input_weight_range1 = document.createElement('input');
-        let size = document.createElement('a');
-        let = input_size_range2 = document.createElement('input');
+        // Append 
+        //weight DIV
+       
+        weight_container.appendChild(weight);  
+        weight_container.appendChild(input_weight_range1);
         input_weight_range1.setAttribute('type', 'range');
-        input_size_range2.setAttribute('type', 'range');
-        let variable = document.createElement('p');
-        let number_of_styles = document.createElement('p');  
-        let variabu = document.createElement('a'); 
-        let closed_source = document.createElement('a');
-           
-  
 
+
+        // weight.appendChild(weight_container);
+
+        // Size DIV
+       
+        size_container.appendChild(size);
+        size_container.appendChild(input_size_range2);
+        input_size_range2.setAttribute('type', 'range');
+  
+        // Section2
+        sec2.appendChild(number_of_styles);
+        sec2.appendChild(variabu);
+        sec2.appendChild(closed_source);
+        //Sec1 classlist
+        sec1.classList.add('section1');
+        sec2.classList.add('section2');
         //Append to the motherdiv
         motherdiv.appendChild(controller);
-        // motherdiv.classList.add('conts');
-        motherdiv.appendChild(text);
+        console.log(motherdiv);
++        motherdiv.appendChild(text);
         motherdiv.appendChild(footer);
-
-        // Appending to Controller
-        controller.appendChild(fontName);
-        controller.appendChild(select1);
-        // controller.appendChild(option1);
-        controller.appendChild(weight_container);
-        controller.appendChild(input_weight_range1);
-        controller.appendChild(size);
-        controller.appendChild(input_size_range2);
-        controller.appendChild(variable);
-        controller.appendChild(number_of_styles);
-        controller.appendChild(number_of_styles);
-        controller.appendChild(variabu);
-        controller.appendChild(closed_source);
-
-
-
-
         // Apend controller to the body
         container.appendChild(controller);
         container.appendChild(motherdiv);
@@ -97,7 +142,6 @@ async function get_fontname(){
 
         
         // Adding No of Styles in the variable
-        let no_of_styles = document.createTextNode(i.variants.length + ' ' + 'Styles');
         number_of_styles.appendChild(no_of_styles);
         let vari = document.createTextNode('Variable');
         variabu.appendChild(vari);

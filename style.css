@@ -483,10 +483,8 @@ input{
 }
 
 .classification{
-    width: 25%;
-}
-.classification select{
-    width: 50%;
+    width: 10%;
+    text-transform: capitalize;
     border: none; 
     outline: none;
     cursor: pointer;
@@ -504,7 +502,7 @@ input{
     width: 50%;
     display: flex;
 }
-.range select{
+.range{
     width: 100px;
     /* width: 50%; */
     border: none; 
@@ -617,10 +615,10 @@ input{
 }
 .inputbox{
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    width: 100%;
+    /* height: 400px; */
     font-size: .7rem;
-    border: 1px solid #ccc;
+    /* border: 1px solid #ccc; */
     padding: 10px 30px;
     /* padding: 10px 0; */
 }
@@ -650,18 +648,18 @@ input{
     top: 0;
 }
 .weight{
-    width: 200px;
+    width: 15%;
     display: flex;
     align-items: center;
+    font-weight: 500;
 }
 .weight_input{
-    width: 100px;
-    margin-left: 20px;
+    width: 50px;
+    margin-right: 5px;
+    font-size: .8rem;
 }
 .size{
-    width: 200px;
-    display: flex;
-    align-items: center;
+    width: 15%;
     margin-left: 20px;
 }
 .size_input{
@@ -686,6 +684,26 @@ input{
     width:100%;
     border: 1px solid red;
 } */
+.section1{
+    width: 70%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.section2{
+    width: 30%;
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.font_name{
+    width: 15%;
 
+}
+input{
+    width:100px;
+}
 }
 
